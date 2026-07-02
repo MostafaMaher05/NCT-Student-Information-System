@@ -1,0 +1,298 @@
+/* ================= AdminDashboard.css ================= */
+.admin-dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* كروت التحكم (Hub Cards) */
+.admin-hub-cards {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.hub-card {
+  flex: 1;
+  min-width: 350px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-color: #088395;
+}
+
+.hub-card-icon {
+  font-size: 80px;
+  /* مكان الأيقونات */
+  background: #f8fafc;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.hub-card-info h2 {
+  font-size: 22px;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.hub-card-info p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+/* تنسيق قسم المعلومات جوه الكارت عشان يوزع المساحات صح */
+.hub-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* عشان ياخد طول الكارت */
+}
+
+/* الزرار المودرن الجديد */
+.hub-action-btn {
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  /* كبرنا البادينج عشان يبقى مالي مركزه */
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  /* هياخد عرض الجزء المخصص ليه بالكامل */
+  margin-top: auto;
+  /* السر هنا: هيزق الزرار لتحت دايماً عشان الكروت تبقى متساوية */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(8, 131, 149, 0.2);
+  /* ضل خفيف يديله عمق */
+}
+
+.hub-action-btn:hover {
+  background-color: #066b7a;
+  box-shadow: 0 6px 15px rgba(8, 131, 149, 0.3);
+  transform: translateY(-2px);
+  /* نطة خفيفة لفوق لما تقف عليه */
+}
+
+/* قسم الكورسات النشطة */
+.section-title {
+  font-size: 24px;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+.admin-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* كارت الكورس */
+.admin-course-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card-header-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #3b82f6 0%, #088395 100%);
+}
+
+.admin-course-header {
+  margin-bottom: 20px;
+}
+
+.admin-course-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-course-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-tag {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* شبكة الدرجات */
+.admin-grades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 15px 10px;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-grade-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e2e8f0;
+}
+
+.admin-grade-stat:last-child {
+  border-right: none;
+}
+
+.admin-stat-label {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.admin-stat-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/* أزرار الكارت (الفتح والحذف) */
+.admin-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.admin-grading-btn {
+  flex: 1;
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-grading-btn:hover {
+  background-color: #066b7a;
+}
+
+.admin-delete-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-delete-btn:hover {
+  background-color: #f87171;
+  color: white;
+}
+
+/* تنسيقات الصور الجديدة */
+.hub-card-icon {
+  background: transparent;
+  /* شيلنا الخلفية الرمادي عشان الـ PNG تظهر بشياكة */
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* عشان الصورة متتمطش وتحافظ على أبعادها */
+}
+
+/* تنسيقات زرار المسح المودرن */
+.admin-delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fee2e2;
+  color: #ef4444;
+  /* لون أحمر هادي */
+  border: none;
+  padding: 0 18px;
+  /* تظبيط العرض */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-delete-btn:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.modern-trash-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}

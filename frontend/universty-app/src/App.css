@@ -1,0 +1,59 @@
+/* ================= App.css (Global Styles & Shared Components) ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf3f4; /* خلفية النظام بالكامل */
+}
+
+/* ---------------- Shared Header (Used in Dashboards & Manage Students) ---------------- */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  height: 60px;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #004d4d;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #e2e8f0;
+}

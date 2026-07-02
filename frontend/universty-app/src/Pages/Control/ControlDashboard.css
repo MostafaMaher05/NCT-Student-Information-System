@@ -1,0 +1,255 @@
+/* ================= ControlDashboard.css ================= */
+.dashboard-page {
+  padding: 40px;
+  background-color: #ecf3f4;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.hub-container_control {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* الكارت الأيسر */
+.control-left-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.control-icon-large {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.control-left-card h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.control-left-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.control-action-btn {
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.control-action-btn:hover {
+  background-color: #066b7a;
+}
+
+/* الكارت الأيمن (البحث والجدول) */
+.control-search-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  flex: 2.5;
+  /* عشان ياخد مساحة أكبر من الكارت الأيسر زي الديزاين */
+  border: 1px solid #088395;
+  /* إطار خفيف بلون النظام */
+}
+
+.control-search-card h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.search-bar-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 20px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.search-bar-container input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.search-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.statement-header {
+  margin-bottom: 20px;
+}
+
+.statement-header h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.statement-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ================= تنسيقات جدول الكورسات ================= */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.control-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: center;
+  /* توسيط النص زي الديزاين */
+}
+
+.control-table th {
+  background: #088395;
+  color: white;
+  padding: 15px 12px;
+  font-weight: 600;
+  border-right: 1px solid #066b7a;
+}
+
+.control-table th:last-child {
+  border-right: none;
+}
+
+.control-table td {
+  padding: 14px 12px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #BCBCBC;
+}
+
+.control-table td:last-child {
+  border-right: none;
+}
+
+/* تبديل ألوان الصفوف (Zebra Striping) */
+.control-table tbody tr:nth-child(even) {
+  background: #F4F8F9;
+}
+
+.control-table tbody tr:nth-child(odd) {
+  background: white;
+}
+
+/* تنسيقات النصوص في الجدول */
+.fw-bold {
+  font-weight: 600;
+}
+
+.text-primary {
+  color: #088395;
+}
+
+.text-dark {
+  color: #2D3748;
+}
+
+.text-muted {
+  color: #718096;
+}
+
+/* الباجات (Badges) */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge-warning {
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.badge-info {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.badge-success {
+  background: #DEF7EC;
+  color: #03543F;
+}
+
+.empty-state {
+  padding: 30px !important;
+  color: #718096;
+}
+
+/* إضافات لجماليات الجدول والحالة الافتراضية */
+.italic-text {
+  font-style: italic;
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.error-text {
+  color: #e53e3e;
+  font-weight: 500;
+}
+
+.control-table td {
+  padding: 14px 12px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* محاذاة اسم الكورس للشمال عشان القراءة تبقي مريحة */
+.control-table td.text-dark {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}

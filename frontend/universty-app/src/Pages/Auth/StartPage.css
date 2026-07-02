@@ -1,0 +1,149 @@
+/* الخلفية الداكنة الفخمة المطابقة للصورة تماماً */
+.start-portal-premium-bg {
+  min-height: 100vh;
+  background-color: #EBF4F6; /* اللون الغامق الموحد في الصورة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.start-portal-wrapper {
+  max-width: 950px;
+  width: 100%;
+  text-align: center;
+}
+
+/* تنسيق الهيدر العلوي والشعار */
+.portal-premium-header {
+  margin-bottom: 50px;
+}
+.portal-main-logo {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 5px;
+  opacity: 0.95;
+}
+.portal-premium-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+.portal-premium-header p {
+  font-size: 15px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* حاوية الكروت الأفقية جنب بعض */
+.portal-cards-row-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+/* تصميم الكارت الأبيض المودرن المتناسق */
+.premium-selection-card {
+  background-color: #EBF4F6;
+  border-radius: 16px;
+  padding: 35px 30px;
+  flex: 1;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 5px 15px #044954;
+  border: 2px solid #7AB2B2;
+}
+
+/* تأثير الـ Hover الانيق */
+.premium-selection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  border-color: #088395;
+}
+
+/* مربع خلفية الأيقونات الناعم داخل الكارت */
+.premium-card-icon-box {
+  width: 65px;
+  height: 65px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.student-box-bg {
+  background-color: #ecfeff;
+}
+.staff-box-bg {
+  background-color: #f1f5f9;
+}
+.premium-card-icon-box img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* نصوص وعناوين الكارت الداخلي */
+.premium-card-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+.premium-card-info p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 65px; /* لتوحيد أبعاد النص في الكارتين */
+}
+
+/* الجزء السفلي التفاعلي للكارت مع السهم */
+.premium-card-action {
+  margin-top: 25px;
+  width: 100%;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+  text-align: center;
+}
+.premium-card-action span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.premium-selection-card:hover .premium-card-action span {
+  color: #088395;
+  transform: translateX(4px);
+}
+
+/* فوتر الحقوق */
+.portal-premium-footer p {
+  font-size: 12px;
+  color: #475569;
+  margin: 0;
+}
+
+/* التجاوب التام مع الشاشات الصغيرة والموبايل لضمان عدم حدوث تشوه */
+@media (max-width: 768px) {
+  .portal-cards-row-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .premium-selection-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}

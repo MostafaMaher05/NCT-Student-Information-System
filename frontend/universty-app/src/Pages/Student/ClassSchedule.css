@@ -1,0 +1,170 @@
+/* ============================================================
+   ClassSchedule.css  –  matches the provided screenshot
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cs-wrapper {
+  min-height: 100vh;
+  background-color: #e8eef4;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== SHARED HEADER STYLES ===== */
+.sd-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dde3ea;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sd-header-logo img {
+  height: 52px;
+  object-fit: contain;
+}
+
+.sd-header-center {
+  text-align: center;
+  flex: 1;
+}
+
+.sd-welcome {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2533;
+  margin-bottom: 6px;
+}
+
+.sd-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 13.5px;
+  color: #4b5a6b;
+}
+
+.sd-meta strong {
+  color: #1a2533;
+  font-weight: 600;
+}
+
+.sd-meta-divider {
+  width: 1px;
+  height: 16px;
+  background: #b0bec8;
+}
+
+.sd-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sd-logout-btn:hover {
+  border-color: #0e9aab;
+  color: #0e9aab;
+  background: #f0fafc;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+.cs-main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px 48px;
+}
+
+/* ===== WHITE CARD ===== */
+.cs-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e4eaf0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.cs-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0e9aab;
+  letter-spacing: 0.2px;
+}
+
+/* ===== FILE DOWNLOAD BOX ===== */
+.cs-file-area {
+  width: 100%;
+  max-width: 420px;
+  border: 1.5px solid #d0dae4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.cs-file-area:hover {
+  border-color: #0e9aab;
+  background: #f0fafc;
+}
+
+.cs-download-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5a7490;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.cs-download-link:hover {
+  color: #0e9aab;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  .sd-header {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+
+  .sd-header-center {
+    order: -1;
+    width: 100%;
+  }
+
+  .cs-card {
+    padding: 28px 18px;
+  }
+}

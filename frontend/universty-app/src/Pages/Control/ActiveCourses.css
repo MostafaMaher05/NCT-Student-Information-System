@@ -1,0 +1,308 @@
+/* ================= ActiveCourses.css ================= */
+.ac-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* أزرار الفلترة (Semesters) */
+.ac-semester-group {
+  display: flex;
+  gap: 10px;
+}
+
+.ac-semester-btn {
+  background-color: transparent;
+  border: 1px solid #088395;
+  color: #088395;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ac-semester-btn:hover {
+  background-color: #f0f9fa;
+}
+
+.ac-semester-btn.active {
+  background-color: #088395;
+  color: white;
+}
+
+/* شريط البحث بعد التعديل وتطويله */
+.ac-search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 10px 25px;
+  /* كبرنا البادينج عشان يبقى أعرض وأشيك */
+  width: 100%;
+  flex: 1;
+  /* ده السر اللي هيخليه ياخد المساحة الفاضية المتاحة */
+  max-width: 650px;
+  /* كبرنا الحد الأقصى بدل 400px */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  /* حركة ناعمة لو الشاشة صغرت */
+}
+
+/* تأثير خفيف لما تدوس جوه السيرش */
+.ac-search-box:focus-within {
+  border-color: #088395;
+  box-shadow: 0 4px 15px rgba(8, 131, 149, 0.1);
+}
+
+.ac-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  /* كبرنا الفونت سنة عشان يناسب الحجم الجديد */
+  padding: 5px 0;
+  color: #333;
+}
+
+.ac-search-icon {
+  width: 22px;
+  height: 22px;
+  color: #999;
+  margin-left: 10px;
+}
+
+/* المحتوى والشبكة */
+.ac-section-title {
+  font-size: 22px;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.ac-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* كارت الكورس */
+.ac-course-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+}
+
+/* الخط الملون أعلى الكارت */
+.ac-card-header-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #4fd1c5 0%, #088395 100%);
+}
+
+.ac-course-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.ac-course-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+}
+
+.ac-divider {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.ac-meta-text {
+  font-size: 13px;
+  color: #666;
+}
+
+/* تفاصيل الدرجات */
+.ac-course-meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.ac-meta-item {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ac-meta-val {
+  color: #333;
+  font-weight: bold;
+  border-left: 1px solid #eee;
+  padding-left: 5px;
+}
+
+/* زرار فتح الشيت */
+.ac-grading-btn {
+  width: 100%;
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ac-grading-btn:hover {
+  background-color: #066b7a;
+}
+
+/* ================= كارت الكورس المحدث ================= */
+.ac-course-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ac-course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.ac-card-header-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #4fd1c5 0%, #088395 100%);
+}
+
+.ac-course-header {
+  margin-bottom: 20px;
+}
+
+.ac-course-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  /* الكود ده بيقص الاسم الطويل ويحط ... بداله عشان ميبوظش الكارت */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ac-course-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ac-tag {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* شبكة الدرجات (الجزء الرمادي المنظم) */
+.ac-grades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 15px 10px;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+}
+
+.ac-grade-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e2e8f0;
+}
+
+.ac-grade-stat:last-child {
+  border-right: none;
+}
+
+.ac-stat-label {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.ac-stat-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.ac-grading-btn {
+  width: 100%;
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: auto;
+  /* عشان الزرار يفضل تحت دايماً لو الكارت كبر */
+}
+
+.ac-grading-btn:hover {
+  background-color: #066b7a;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}

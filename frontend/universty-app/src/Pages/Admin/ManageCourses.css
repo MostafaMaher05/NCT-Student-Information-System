@@ -1,0 +1,436 @@
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.admin-page-layout {
+  padding: 40px;
+  background-color: #ecf3f4;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* الكارت الأساسي */
+.ca-single-card {
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* التارجت والمجموع */
+.ca-top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ca-label {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ca-target-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.ca-radio-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.ca-radio-pills button {
+  padding: 8px 25px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #64748b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ca-radio-pills button.active {
+  border-color: #008080;
+  background: #008080;
+  color: white;
+}
+
+.ca-total-display {
+  text-align: right;
+}
+
+.ca-total-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ca-target-slash {
+  font-size: 20px;
+  color: #94a3b8;
+}
+
+.ca-total-number.valid {
+  color: #27ae60;
+}
+
+.ca-total-number.invalid {
+  color: #e74c3c;
+}
+
+/* شريط التقدم */
+.ca-progress-container {
+  height: 8px;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.ca-progress-bar {
+  height: 100%;
+  background-color: #008080;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.ca-progress-bar.valid {
+  background-color: #27ae60;
+}
+
+.ca-progress-bar.over-limit {
+  background-color: #e74c3c;
+}
+
+.ca-divider {
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 30px 0;
+}
+
+/* صف بيانات الكورس الأساسية */
+.ca-course-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* دي اللي بتخلي كل العناصر تحت على نفس الخط */
+  margin-bottom: 40px;
+}
+
+.ca-course-title-sec {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.ca-course-title-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 24px;
+  padding: 10px 0;
+  color: #0f172a;
+  font-weight: bold;
+  outline: none;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.ca-course-title-input::placeholder {
+  color: #cbd5e1;
+}
+
+.ca-course-title-input:focus {
+  border-bottom-color: #008080;
+}
+
+.ca-semester-radios {
+  display: flex;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+.ca-semester-radios label {
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #64748b;
+  cursor: pointer;
+  border-right: 1px solid #e2e8f0;
+}
+
+.ca-semester-radios label:last-child {
+  border-right: none;
+}
+
+.ca-semester-radios input {
+  display: none;
+}
+
+.ca-semester-radios label.active {
+  background: #008080;
+  color: white;
+}
+
+/* مربعات الدرجات بعد التصغير */
+.ca-basic-grades {
+  display: flex;
+  gap: 15px;
+}
+
+.ca-grade-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  /* تم التصغير هنا */
+  text-align: center;
+  width: 85px;
+  /* تم التصغير هنا */
+}
+
+.ca-grade-label {
+  display: block;
+  font-size: 12px;
+  /* تصغير الخط */
+  color: #64748b;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.ca-grade-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 20px;
+  /* تصغير الخط */
+  font-weight: bold;
+  color: #0f172a;
+  outline: none;
+}
+
+/* الأسايمنتس */
+.ca-section-title {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.ca-assignments-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ca-assignment-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.ca-asm-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #334155;
+}
+
+.ca-asm-input {
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  outline: none;
+}
+
+/* الأزرار السفلية */
+.ca-footer-actions {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 30px;
+}
+
+.ca-add-asm-btn {
+  flex: 1;
+  background: white;
+  border: 2px dashed #cbd5e1;
+  color: #64748b;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.ca-add-asm-btn:hover {
+  border-color: #008080;
+  color: #008080;
+}
+
+.ca-confirm-btn {
+  flex: 2;
+  background: #008080;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.ca-confirm-btn:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* زرار الحذف المودرن (SVG) */
+.ca-modern-delete-btn {
+  background: #fff0f0;
+  border: 1px solid #ffe4e4;
+  border-radius: 8px;
+  color: #e74c3c;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ca-modern-delete-btn:hover {
+  background: #ffe4e4;
+  transform: scale(1.05);
+}
+
+.delete-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* شكل زرار الإضافة لما يكون مقفول (Disabled) */
+.ca-add-asm-btn:disabled {
+  background: #f8fafc;
+  border: 2px dashed #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* عشان نأكد إن شكل الزرار وهو شغال زي ما هو */
+.ca-add-asm-btn {
+  flex: 1;
+  background: white;
+  border: 2px dashed #cbd5e1;
+  color: #64748b;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.ca-add-asm-btn:not(:disabled):hover {
+  border-color: #008080;
+  color: #008080;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+/* ================= Summer Toggle Switch ================= */
+.ca-summer-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.ca-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.ca-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ca-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #cbd5e1;
+  transition: .4s;
+}
+
+.ca-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .ca-slider {
+  background-color: #008080;
+}
+
+input:checked + .ca-slider:before {
+  transform: translateX(20px);
+}
+
+.ca-slider.ca-round {
+  border-radius: 24px;
+}
+
+.ca-slider.ca-round:before {
+  border-radius: 50%;
+}

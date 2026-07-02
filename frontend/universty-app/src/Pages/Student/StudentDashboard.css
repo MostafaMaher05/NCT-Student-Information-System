@@ -1,0 +1,447 @@
+/* ============================================================
+   StudentDashboard.css  –  matches the provided screenshot
+   Color palette: light grey bg, teal accent (#0e9aab / #2bb5c8)
+   ============================================================ */
+
+/* ===== ROOT & RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sd-wrapper {
+  min-height: 100vh;
+  background-color: #e8eef4;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.sd-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dde3ea;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.sd-header-logo img {
+  height: 52px;
+  object-fit: contain;
+}
+
+/* Center block */
+.sd-header-center {
+  text-align: center;
+  flex: 1;
+}
+
+.sd-welcome {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2533;
+  margin-bottom: 6px;
+}
+
+.sd-welcome span {
+  color: #1a2533;
+}
+
+.sd-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 13.5px;
+  color: #4b5a6b;
+}
+
+.sd-meta strong {
+  color: #1a2533;
+  font-weight: 600;
+}
+
+.sd-meta-divider {
+  width: 1px;
+  height: 16px;
+  background: #b0bec8;
+}
+
+/* Logout button */
+.sd-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sd-logout-btn:hover {
+  border-color: #0e9aab;
+  color: #0e9aab;
+  background: #f0fafc;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+.sd-main {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 0 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ============================================================
+   FEATURE CARDS ROW
+   ============================================================ */
+.sd-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.sd-feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e4eaf0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.sd-feature-card:hover {
+  box-shadow: 0 6px 24px rgba(14, 154, 171, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ===== ICON AREA ===== */
+.sd-card-icon-wrap {
+  flex-shrink: 0;
+  width: 110px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Grades icon (A+ on paper) --- */
+.sd-icon-grades {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-grade-paper {
+  width: 74px;
+  height: 84px;
+  background: #ffffff;
+  border: 2px solid #e0e7ef;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+/* Folded corner */
+.sd-grade-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: #e8eef4;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  border-radius: 0 4px 0 0;
+}
+
+.sd-grade-letter {
+  font-size: 28px;
+  font-weight: 800;
+  color: #e04040;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.sd-grade-letter sup {
+  font-size: 16px;
+}
+
+.sd-paper-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 48px;
+}
+
+.sd-paper-lines div {
+  height: 3px;
+  border-radius: 2px;
+  background: #c8d6e5;
+}
+
+.sd-paper-lines div:nth-child(1) {
+  width: 100%;
+}
+
+.sd-paper-lines div:nth-child(2) {
+  width: 80%;
+}
+
+.sd-paper-lines div:nth-child(3) {
+  width: 90%;
+}
+
+/* --- Schedule icon (Calendar) --- */
+.sd-icon-schedule {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sd-calendar {
+  width: 70px;
+  height: 72px;
+  background: #ffffff;
+  border: 2px solid #dde5ef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sd-cal-header {
+  height: 20px;
+  background: linear-gradient(90deg, #2bb5c8, #0e9aab);
+}
+
+.sd-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 8px;
+}
+
+.sd-cal-dot {
+  height: 8px;
+  border-radius: 2px;
+  background: #d4e4f0;
+}
+
+.sd-cal-dot-accent {
+  background: #0e9aab;
+}
+
+.sd-grad-cap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* ===== CARD BODY ===== */
+.sd-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sd-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2533;
+}
+
+.sd-card-desc {
+  font-size: 13.5px;
+  color: #6b7d8f;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+.sd-card-btn {
+  width: fit-content;
+  background: linear-gradient(135deg, #2bb5c8, #0e9aab);
+  color: #ffffff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+
+.sd-card-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.sd-card-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   COURSES TABLE SECTION
+   ============================================================ */
+.sd-table-section {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e4eaf0;
+}
+
+.sd-table-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2533;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid #eaf0f5;
+  letter-spacing: 0.2px;
+}
+
+.sd-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sd-table thead tr {
+  background: linear-gradient(90deg, #1d7d8c, #0e9aab);
+}
+
+.sd-table thead th {
+  padding: 14px 28px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.sd-table tbody tr {
+  border-bottom: 1px solid #f0f4f8;
+  transition: background 0.15s;
+}
+
+.sd-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.sd-table tbody tr:hover {
+  background-color: #f5fafc;
+}
+
+.sd-table tbody td {
+  padding: 14px 28px;
+  text-align: center;
+  color: #2d3e50;
+  font-size: 14px;
+}
+
+/* Loading & empty states */
+.sd-loading,
+.sd-empty {
+  text-align: center;
+  padding: 30px;
+  color: #8a9bb0;
+  font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  .sd-header {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+
+  .sd-header-center {
+    order: -1;
+    width: 100%;
+  }
+
+  .sd-cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-feature-card {
+    padding: 22px 20px;
+    gap: 20px;
+  }
+
+  .sd-table thead th,
+  .sd-table tbody td {
+    padding: 12px 16px;
+  }
+}
+
+/* ================= Tabs (Semester Filters) ================= */
+.sd-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* وسعنا المسافة بين الزراير */
+  margin: 20px 0 35px; /* زودنا المساحة فوق وتحت عشان تتنفس */
+}
+
+.sd-tab-btn {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0; /* سمك الإطار زاد عشان يحدد الزرار */
+  color: #64748b;
+  padding: 12px 120px; /* كبرنا الحجم (الطول والعرض) */
+  border-radius: 30px; /* تدويرة متناسقة مع الحجم الجديد */
+  font-weight: 700; /* خط أثقل وأوضح */
+  font-size: 16px; /* خط أكبر */
+  cursor: pointer;
+  transition: all 0.3s ease; /* حركة أنعم */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02); /* ضل خفيف جدا في العادي */
+}
+
+.sd-tab-btn.active {
+  background: #0e9aab;
+  color: white;
+  border-color: #0e9aab;
+  box-shadow: 0 6px 15px rgba(14, 154, 171, 0.25); /* ضل أوضح وأشيك للزرار النشط */
+  transform: translateY(-2px); /* الزرار بيطلع لفوق سنة بسيطة */
+}
+
+.sd-tab-btn:hover:not(.active) {
+  background: #e2e8f0;
+  color: #334155;
+  transform: translateY(-1px);
+}

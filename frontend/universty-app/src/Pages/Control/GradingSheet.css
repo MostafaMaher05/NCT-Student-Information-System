@@ -1,0 +1,347 @@
+/* إخفاء أسهم الأرقام من كل الحقول */
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.grading-page-layout {
+  padding: 40px;
+  background-color: #ecf3f4;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* الكارت العلوي */
+.course-header-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.course-info-section h2 {
+  font-size: 32px;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.total-max-grade {
+  font-size: 24px;
+  color: #94a3b8;
+  font-weight: 300;
+}
+
+.badges-row {
+  display: flex;
+  gap: 15px;
+}
+
+.info-badge {
+  border: 1px solid #333;
+  padding: 4px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* الأزرار */
+.course-actions-section {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-excel {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-excel:hover {
+  background-color: #219653;
+}
+
+.btn-sync {
+  background-color: #088395;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-sync:hover {
+  background-color: #066b7a;
+}
+
+/* ================= جدول الدرجات ================= */
+.grading-table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.grading-sheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* الهيدر الأساسي */
+.dark-th {
+  background-color: #088395;
+  color: white;
+  padding: 15px;
+  font-size: 12px;
+  border-right: 1px solid #94a3b8;
+  vertical-align: middle;
+}
+
+.teal-th {
+  background-color: #088395;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+/* الهيدر الفرعي (تحت الماتريكس) */
+.matrix-sub-th {
+  background-color: #f8fafc;
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* الخلايا والصفوف */
+.grading-sheet-table td {
+  padding: 12px;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.grading-sheet-table td:last-child {
+  border-right: none;
+}
+
+.name-cell {
+  background-color: #f8fafc;
+  /* لون خفيف لعمود الاسم */
+}
+
+/* حقول إدخال الدرجات */
+.grade-input {
+  width: 50px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0f172a;
+  outline: none;
+}
+
+.grade-input:focus {
+  border-bottom: 2px solid #088395;
+}
+
+/* تنسيقات مساعدة */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.px-20 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-dark {
+  color: #0f172a;
+}
+
+/* كبسولات الحالة الشيك جداً */
+.status-pill {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status-pill.pass {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-pill.fail {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* تنسيقات خلايا الأكواد الكحلي المريحة للعين */
+.code-cell {
+  background-color: #f8fafc;
+  color: #088395 !important;
+}
+
+/* تمييز خلايا الرأفة لو الطالب استفاد منها */
+.grace-cell.has-grace {
+  color: #d97706;
+  background-color: #fffbeb;
+  animation: pulse 2s infinite;
+}
+
+.total-cell {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.percentage-cell {
+  color: #2563eb;
+}
+
+/* إخفاء الأسهم الرخمة */
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* تنسيقات الهيدر الجديد (اسم الكورس والباجات) */
+.course-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.course-main-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0;
+}
+
+.course-max-text {
+  font-size: 22px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.course-badges-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.course-outline-badge {
+  border: 1px solid #64748b;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  background-color: transparent;
+}
+
+/* تنسيق زرار الإكسيل */
+.btn-excel {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-excel:hover {
+  background-color: #219653;
+}
+
+/* 1. تثبيت مقاسات الجدول نهائياً */
+.grading-sheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  /* الكود ده هو اللي بيمنع الجدول يوسع ويضيق مع الأرقام */
+  text-align: center;
+  font-size: 13px;
+}
+
+/* 2. تحسين شكل حقول الإدخال عشان تبقى واضحة ومريحة */
+.grade-input {
+  width: 80%;
+  padding: 8px 0;
+  border: 1px solid transparent;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.grade-input:focus {
+  background-color: white;
+  border: 1px solid #088395;
+  box-shadow: 0 0 0 3px rgba(8, 131, 149, 0.1);
+}
+
+.grade-input:hover:not(:focus) {
+  background-color: #e2e8f0;
+}
+
+/* 3. تأثير الـ Hover على الصفوف عشان تميز الطالب اللي بتقرا درجاته */
+.grading-row {
+  transition: background-color 0.2s ease;
+}
+
+.grading-row:hover {
+  background-color: #f0f9fa;
+  /* لون أزرق/تيل خفيف جداً عند الوقوف بالماوس */
+}
+
+/* 4. تمييز الصفوف الفردية والزوجية (Zebra Striping) لسهولة القراءة */
+.grading-sheet-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}

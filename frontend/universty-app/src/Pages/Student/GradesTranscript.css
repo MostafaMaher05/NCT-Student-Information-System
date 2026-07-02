@@ -1,0 +1,282 @@
+/* ============================================================
+   GradesTranscript.css  –  matches the provided screenshot
+   Shares header styles with StudentDashboard.css
+   ============================================================ */
+
+/* ===== SHARED HEADER STYLES (copy from StudentDashboard.css) ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.gt-wrapper {
+  min-height: 100vh;
+  background-color: #e8eef4;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Header (identical to sd-header) --- */
+.sd-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dde3ea;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sd-header-logo img {
+  height: 52px;
+  object-fit: contain;
+}
+
+.sd-header-center {
+  text-align: center;
+  flex: 1;
+}
+
+.sd-welcome {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2533;
+  margin-bottom: 6px;
+}
+
+.sd-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 13.5px;
+  color: #4b5a6b;
+}
+
+.sd-meta strong {
+  color: #1a2533;
+  font-weight: 600;
+}
+
+.sd-meta-divider {
+  width: 1px;
+  height: 16px;
+  background: #b0bec8;
+}
+
+.sd-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #1a2533;
+  border: 1.5px solid #cdd5de;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sd-logout-btn:hover {
+  border-color: #0e9aab;
+  color: #0e9aab;
+  background: #f0fafc;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.gt-main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 24px 48px;
+}
+
+/* ===== WHITE CARD ===== */
+.gt-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e4eaf0;
+}
+
+.gt-card-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0e9aab;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+.gt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header row */
+.gt-table thead tr {
+  background: linear-gradient(90deg, #1d7d8c, #0e9aab);
+}
+
+.gt-table thead th {
+  padding: 13px 18px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Body rows */
+.gt-table tbody tr {
+  border-bottom: 1px solid #f0f4f8;
+  transition: background 0.15s;
+}
+
+.gt-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.gt-table tbody tr:hover {
+  background-color: #f5fafc;
+}
+
+.gt-table tbody td {
+  padding: 14px 18px;
+  text-align: center;
+  color: #2d3e50;
+  font-size: 14px;
+}
+
+/* Score column */
+.gt-score {
+  font-weight: 600;
+  color: #1a2533 !important;
+}
+
+.gt-pending {
+  color: #94a3b8;
+}
+
+/* ============================================================
+   APPRECIATION PILLS
+   ============================================================ */
+.gt-appr {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.appr-excellent {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.appr-verygood {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.appr-good {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.appr-pass {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.appr-fail {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.appr-pending {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+/* ============================================================
+   STATES
+   ============================================================ */
+.gt-loading,
+.gt-empty {
+  text-align: center;
+  padding: 32px;
+  color: #8a9bb0;
+  font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  .sd-header {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+
+  .sd-header-center {
+    order: -1;
+    width: 100%;
+  }
+
+  .gt-card {
+    padding: 24px 16px;
+  }
+
+  .gt-table thead th,
+  .gt-table tbody td {
+    padding: 11px 10px;
+    font-size: 13px;
+  }
+}
+
+/* ================= Tabs (Semester Filters) ================= */
+.gt-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px; /* مساحة ممتازة قبل الجدول */
+}
+
+.gt-tab-btn {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  color: #64748b;
+  padding: 12px 50px; 
+  border-radius: 30px; 
+  font-weight: 700; 
+  font-size: 16px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.gt-tab-btn.active {
+  background: #0e9aab;
+  color: white;
+  border-color: #0e9aab;
+  box-shadow: 0 6px 15px rgba(14, 154, 171, 0.25);
+  transform: translateY(-2px);
+}
+
+.gt-tab-btn:hover:not(.active) {
+  background: #e2e8f0;
+  color: #334155;
+  transform: translateY(-1px);
+}
